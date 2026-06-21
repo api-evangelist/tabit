@@ -1,0 +1,63 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Tabit
+providerId: tabit
+created: '2026-06-21'
+modified: '2026-06-21'
+reconciled: false
+tags:
+- Restaurant
+- Point of Sale
+- POS
+- Hospitality
+- Ordering
+- Payments
+- Plans
+description: >-
+  Tabit pricing is sales-led and is not published on the website. The platform
+  is sold as a subscription/licensed restaurant management system (per-location
+  and per-product), with payment processing handled through Tabit Pay and
+  certified payment providers. Pricing is obtained by booking a demo and
+  contacting Tabit sales; no public, self-service developer API plans or
+  pay-as-you-go API tiers are published, because Tabit does not operate a public
+  developer API. Values here are not reconciled.
+notes: >-
+  No public pricing is disclosed; obtain a quote via Tabit sales ("Book a Demo").
+  Update this artifact if Tabit publishes pricing or introduces public API plans.
+sources:
+- https://www.tabit.cloud/
+- https://www.tabit.cloud/integrations/
+- https://support-us.tabit.cloud/hc/en-us
+plans:
+- id: tabit-platform
+  name: Tabit Platform (sales-led)
+  type: subscription
+  description: >-
+    Subscription/licensed restaurant POS and hospitality platform sold per
+    location and per product module. Pricing is quoted by Tabit sales and is not
+    publicly listed.
+  entries:
+  - label: Platform Subscription
+    name: platform_subscription
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: contact sales
+    userMultiplied: false
+  elements:
+  - name: Tabit PAD (Mobile POS)
+  - name: Tabit Order (Online Ordering)
+  - name: Tabit Pay (Payments)
+  - name: Tabit Chef / Kitchen (KDS)
+  - name: Tabit Kiosk
+  - name: Tabit Wheels (Delivery)
+  - name: Tabit Reservations / Guest
+  - name: Tabit Analytics
+  - name: Partner Integrations
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

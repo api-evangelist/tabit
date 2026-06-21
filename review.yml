@@ -1,0 +1,94 @@
+aid: tabit
+name: Tabit
+review:
+  question: Does Tabit expose a documented public developer API?
+  answer: false
+  date: '2026-06-21'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No public REST, WebSocket, SSE, or other streaming API surface is documented
+    by Tabit, so no AsyncAPI document was created. There is nothing public to model.
+findings:
+  summary: |
+    Tabit (Tabit Technologies, tabit.cloud) is a mobile-first cloud restaurant
+    POS and hospitality platform. As of the review date it does NOT publish a
+    public, self-service developer API or API reference. There is no public
+    developer portal, no published OpenAPI/Swagger definition, no documented
+    public base URL, and no documented authentication scheme (API keys, OAuth,
+    bearer tokens, etc.).
+
+    Tabit's real functional surface (orders, menu, reservations, payments,
+    integrations) is exposed only through a partner program. Integrators submit
+    an "Integration Request" and work through certified partner guides in the
+    Tabit Help Center — for example Hotel PMS (Stayntouch), white-label delivery
+    (DoorDash Marketplace), reservation software (Tabit is a listed OpenTable POS
+    integration partner), online-ordering / third-party menu management, and
+    FOH/BOH software. Payment flows run through Tabit Pay and a Secure Payment
+    Form (SPF) component maintained in Tabit's engineering GitHub org (inPact),
+    which hosts internal utility libraries rather than a public API repo.
+
+    Pricing is sales-led ("Book a Demo"); no public pricing is disclosed, so the
+    plans, rate-limits, and finops artifacts are marked reconciled: false.
+  apiAvailability: partner-gated
+  publicDeveloperPortal: false
+  publicApiReference: false
+  publicOpenAPI: false
+  documentedBaseURL: false
+  documentedAuth: false
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API reference or base URL is published by Tabit.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket API is documented.
+    - protocol: SSE
+      scheme: https
+      documented: false
+      note: No Server-Sent Events streaming API is documented.
+  integrationModel:
+    type: partner-gated
+    note: |
+      Access is via an integration-request process and certified-partner guides,
+      not self-service API keys. Confirmed integration categories include Hotel
+      PMS, white-label delivery, analytics, reservation software, and FOH/BOH
+      software.
+  confirmedIntegrations:
+    - DoorDash Marketplace (white-label delivery / online ordering)
+    - OpenTable (reservation software; Tabit listed as a POS integration partner)
+    - Stayntouch (Hotel PMS)
+    - Online-ordering / third-party menu management
+sources:
+  - url: https://www.tabit.cloud/
+    type: Website
+    note: Product suite (PAD, Order, Pay, Chef, Kiosk, Wheels, Guest, Analytics, Hotels); sales-led, "Book a Demo". No API/developer links.
+  - url: https://www.tabit.cloud/integrations/
+    type: Documentation
+    note: Integration categories listed (Hotel PMS, white-label delivery, analytics, FOH/BOH, reservation software) with an "Integration Request" CTA; no API docs.
+  - url: https://support-us.tabit.cloud/hc/en-us/articles/12570827573266-Overview-of-Tabit-s-Integrations
+    type: Documentation
+    note: Help Center overview of integrations; partner-oriented, no public API reference.
+  - url: https://support-us.tabit.cloud/hc/en-us/sections/15837301376658-Integration-Guides
+    type: Documentation
+    note: Integration Guides section (e.g., DoorDash Marketplace onboarding); partner guides, not a public API.
+  - url: https://support-us.tabit.cloud/hc/en-us/categories/22390251048210-Payments
+    type: Documentation
+    note: Tabit Pay payments documentation; product-level, no public payments API.
+  - url: https://github.com/inPact
+    type: GitHubOrganization
+    note: Tabit's engineering org (Rishpon, Israel); hosts tabit-spf (Secure Payment Form) and internal utility libraries, no public API repo.
+actions:
+  apisYmlUpdated: true
+  openapiPath: openapi/tabit-openapi.yml
+  reason: |
+    No public API exists to model, so openapi/tabit-openapi.yml was authored with
+    an empty paths object and a description stating no public API is documented.
+    No endpoints, base URLs, or auth schemes were fabricated. The catalog records
+    Tabit's real functional areas (Orders, Menu, Reservations, Payments,
+    Integrations) as partner-gated, with availability documented honestly.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

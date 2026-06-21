@@ -1,0 +1,49 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Tabit
+providerId: tabit
+created: '2026-06-21'
+modified: '2026-06-21'
+reconciled: false
+tags:
+- Restaurant
+- Point of Sale
+- POS
+- Hospitality
+- Ordering
+- Payments
+- Rate Limiting
+- Quotas
+- Throttling
+description: >-
+  Tabit does not publish a public developer API or API reference, and therefore
+  publishes no public rate limits, quotas, or throttling policy. Any limits that
+  apply to certified partner integrations (e.g., Hotel PMS, delivery, reservation,
+  online-ordering) are defined within individual partner integration agreements
+  and guides rather than in a public document. No values are reconciled.
+notes: >-
+  Verify any applicable limits directly with Tabit during partner onboarding;
+  none are publicly documented as of the catalog date.
+sources:
+- https://support-us.tabit.cloud/hc/en-us/sections/15837301376658-Integration-Guides
+- https://support-us.tabit.cloud/hc/en-us/articles/12570827573266-Overview-of-Tabit-s-Integrations
+responseCodes:
+  throttled: unknown
+limits:
+- name: Public API Rate Limits
+  scope: account
+  metric: requests
+  limit: not published
+  notes: No public developer API exists; no public rate limits are documented.
+- name: Partner Integration Limits
+  scope: integration
+  metric: requests
+  limit: see partner agreement
+  notes: Any limits are defined per certified partner integration, not publicly.
+policies:
+- name: Partner-Gated Access
+  description: Access is granted through an integration-request and certified-partner process, not self-service API keys.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

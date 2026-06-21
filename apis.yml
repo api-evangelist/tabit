@@ -1,0 +1,131 @@
+aid: tabit
+url: https://raw.githubusercontent.com/api-evangelist/tabit/refs/heads/main/apis.yml
+name: Tabit
+kind: company
+description: Tabit is a mobile-first, cloud-based restaurant point-of-sale and hospitality
+  management platform from Tabit Technologies. Its product suite spans tableside mobile
+  ordering and payments (PAD/Pay), online ordering (Order), kitchen display (Chef),
+  self-service kiosks, delivery (Wheels), guest management, gift cards, and hotel
+  F&B/PMS integration. Tabit does not publish a public, self-service developer API
+  or API reference; integrations are delivered through a partner program and an
+  integration-request process rather than an open developer portal.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Restaurant
+- Point of Sale
+- POS
+- Hospitality
+- Ordering
+- Payments
+created: '2026-06-21'
+modified: '2026-06-21'
+specificationVersion: '0.19'
+apis:
+- aid: tabit:tabit-orders-api
+  name: Tabit Orders API
+  tags:
+  - Orders
+  - Ordering
+  - POS
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.tabit.cloud/integrations/
+  properties:
+  - url: https://www.tabit.cloud/integrations/
+    type: Documentation
+  - url: openapi/tabit-openapi.yml
+    type: OpenAPI
+  description: Order capture and management across Tabit's mobile POS (PAD), online
+    ordering (Order), kiosk, and delivery (Wheels) products. Order data flows to
+    third-party channels (e.g., DoorDash Marketplace) through partner integrations
+    rather than a documented public REST endpoint. No public order API reference,
+    base URL, or authentication scheme is published as of this catalog date.
+- aid: tabit:tabit-menu-api
+  name: Tabit Menu API
+  tags:
+  - Menu
+  - Catalog
+  - Items
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://support-us.tabit.cloud/hc/en-us/sections/4942208018578-Online-Ordering-Integrations
+  properties:
+  - url: https://support-us.tabit.cloud/hc/en-us/sections/4942208018578-Online-Ordering-Integrations
+    type: Documentation
+  - url: openapi/tabit-openapi.yml
+    type: OpenAPI
+  description: Menu and item/modifier management used to publish Tabit menus to
+    online-ordering and third-party delivery channels (third-party menu management).
+    Exposed to partners through Tabit's integration program; no public menu API
+    reference, base URL, or authentication is documented.
+- aid: tabit:tabit-reservations-api
+  name: Tabit Reservations API
+  tags:
+  - Reservations
+  - Bookings
+  - Guest
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.tabit.cloud/integrations/
+  properties:
+  - url: https://www.tabit.cloud/integrations/
+    type: Documentation
+  - url: openapi/tabit-openapi.yml
+    type: OpenAPI
+  description: Reservation and guest-management capabilities, including integration
+    with reservation software (e.g., Tabit is a listed OpenTable POS integration
+    partner). Reservation data exchange is handled via certified partner integrations;
+    no public reservations API reference or base URL is published.
+- aid: tabit:tabit-payments-api
+  name: Tabit Payments API
+  tags:
+  - Payments
+  - Tabit Pay
+  - Checkout
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://support-us.tabit.cloud/hc/en-us/categories/22390251048210-Payments
+  properties:
+  - url: https://support-us.tabit.cloud/hc/en-us/categories/22390251048210-Payments
+    type: Documentation
+  - url: openapi/tabit-openapi.yml
+    type: OpenAPI
+  description: Tabit Pay handles tableside card, tap-to-pay, and pay-at-table flows
+    (QR / SMS to the guest's device) along with a Secure Payment Form (SPF) component
+    maintained by Tabit's engineering org. Payment processing is delivered through
+    the product and certified payment-provider integrations; no public, self-service
+    payments API reference or base URL is published.
+- aid: tabit:tabit-integrations-api
+  name: Tabit Integrations API
+  tags:
+  - Integrations
+  - Partners
+  - PMS
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://support-us.tabit.cloud/hc/en-us/articles/12570827573266-Overview-of-Tabit-s-Integrations
+  properties:
+  - url: https://support-us.tabit.cloud/hc/en-us/articles/12570827573266-Overview-of-Tabit-s-Integrations
+    type: Documentation
+  - url: https://support-us.tabit.cloud/hc/en-us/sections/15837301376658-Integration-Guides
+    type: Documentation
+  - url: openapi/tabit-openapi.yml
+    type: OpenAPI
+  description: Tabit's partner integration surface spanning Hotel PMS, white-label
+    delivery (e.g., DoorDash Marketplace), analytics, reservation software, and
+    front/back-of-house software. Onboarding is driven by an integration-request
+    process and certified-partner guides rather than a public, open API; no
+    self-service developer portal, endpoint catalog, or auth scheme is published.
+common:
+- type: GitHubOrganization
+  url: https://github.com/inPact
+- type: LinkedIn
+  url: https://www.linkedin.com/company/tabit-technologies
+- type: Website
+  url: https://www.tabit.cloud/
+- type: Documentation
+  url: https://support-us.tabit.cloud/hc/en-us
+- type: Plans
+  url: plans/tabit-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/tabit-rate-limits.yml
+- type: FinOps
+  url: finops/tabit-finops.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

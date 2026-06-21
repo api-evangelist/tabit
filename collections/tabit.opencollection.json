@@ -1,0 +1,50 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Tabit API",
+    "version": "0.0.0",
+    "description": "Tabit (Tabit Technologies, tabit.cloud) is a mobile-first cloud restaurant POS and hospitality platform. As of 2026-06-21 Tabit does NOT publish a public, self-service developer API or API reference: no public developer portal, no published OpenAPI, no documented base URL, and no documented authentication scheme. Integrations are partner-gated via an integration-request process and certified-partner guides. This open collection documents Tabit's real functional areas as informational folders only; no endpoints, URLs, or auth have been fabricated."
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Orders",
+        "type": "folder"
+      },
+      "docs": "Order capture and management across Tabit PAD (mobile POS), Order (online ordering), Kiosk, and Wheels (delivery). No public order API endpoint or base URL is documented; order data flows to third-party channels via partner integrations.",
+      "items": []
+    },
+    {
+      "info": {
+        "name": "Menu",
+        "type": "folder"
+      },
+      "docs": "Menu and item/modifier management used to publish Tabit menus to online-ordering and third-party delivery channels. Exposed to partners through Tabit's integration program; no public menu API endpoint is documented.",
+      "items": []
+    },
+    {
+      "info": {
+        "name": "Reservations",
+        "type": "folder"
+      },
+      "docs": "Reservation and guest management, including integration with reservation software (Tabit is a listed OpenTable POS integration partner). Handled via certified partner integrations; no public reservations API endpoint is documented.",
+      "items": []
+    },
+    {
+      "info": {
+        "name": "Payments",
+        "type": "folder"
+      },
+      "docs": "Tabit Pay tableside card, tap-to-pay, and pay-at-table (QR/SMS) flows plus a Secure Payment Form (SPF) component. Delivered through the product and certified payment-provider integrations; no public payments API endpoint is documented.",
+      "items": []
+    },
+    {
+      "info": {
+        "name": "Integrations",
+        "type": "folder"
+      },
+      "docs": "Partner integration surface spanning Hotel PMS, white-label delivery (e.g., DoorDash Marketplace), analytics, reservation software, and FOH/BOH software. Onboarding via integration request and certified-partner guides; no public, self-service API endpoint is documented.",
+      "items": []
+    }
+  ]
+}

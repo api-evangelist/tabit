@@ -1,0 +1,76 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: Tabit
+providerId: tabit
+created: '2026-06-21'
+modified: '2026-06-21'
+reconciled: false
+tags:
+- Restaurant
+- Point of Sale
+- POS
+- Hospitality
+- Ordering
+- Payments
+- FinOps
+- Cost Management
+- FOCUS
+description: >-
+  FinOps view of Tabit spend. Tabit is a sales-led restaurant POS and hospitality
+  platform billed as a subscription/license (per location and per product module),
+  with payment processing handled via Tabit Pay and certified payment providers.
+  Tabit does not operate a public, usage-metered developer API, so there is no
+  per-call / per-token API metering to model. Cost management is driven by
+  subscription terms negotiated with Tabit sales and by payment-processing fees.
+  Values here are not reconciled.
+notes: >-
+  No public pricing or usage metering is published; reconcile against the
+  negotiated Tabit subscription agreement and payment-processing statements.
+sources:
+- https://www.tabit.cloud/
+- https://support-us.tabit.cloud/hc/en-us/categories/22390251048210-Payments
+- https://focus.finops.org/focus-specification/v1-3/
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: Tabit
+serviceCategory: Software
+billingModel:
+  pricingCategory: Subscription
+  billingFrequency: Monthly
+  billingCurrency: USD
+  chargeCategories:
+  - Purchase
+  - Usage
+meters:
+- name: platform_subscription
+  description: Subscription/license fee for the Tabit platform, quoted per location and product module.
+  unit: contract
+  aggregation: sum
+  dimensions:
+  - account
+  - location
+  - product
+- name: payment_processing
+  description: Payment-processing volume handled via Tabit Pay / certified payment providers (fees per processor agreement).
+  unit: transactions
+  aggregation: sum
+  dimensions:
+  - account
+  - location
+principles:
+- name: Visibility
+  description: Track Tabit subscription line items per location/module and payment-processing fees per statement.
+- name: Allocation
+  description: Map subscription and processing costs to locations and product modules (POS, online ordering, delivery).
+- name: Optimization
+  description: Right-size enabled product modules per location; review payment-processing rates during contract renewals.
+- name: Accountability
+  description: Assign an owner per location/contract; review subscription and processing spend against budget.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
