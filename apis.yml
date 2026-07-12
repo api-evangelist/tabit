@@ -112,6 +112,8 @@ apis:
     process and certified-partner guides rather than a public, open API; no
     self-service developer portal, endpoint catalog, or auth scheme is published.
 common:
+- type: DomainSecurity
+  url: security/tabit-domain-security.yml
 - type: GitHubOrganization
   url: https://github.com/inPact
 - type: LinkedIn
@@ -126,6 +128,8 @@ common:
   url: rate-limits/tabit-rate-limits.yml
 - type: FinOps
   url: finops/tabit-finops.yml
+- url: https://www.tabit.cloud/blog/feed/
+  type: Blog
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
