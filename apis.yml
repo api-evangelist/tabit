@@ -9,7 +9,19 @@ description: Tabit is a mobile-first, cloud-based restaurant point-of-sale and h
   F&B/PMS integration. Tabit does not publish a public, self-service developer API
   or API reference; integrations are delivered through a partner program and an
   integration-request process rather than an open developer portal.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: enterprise
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Enterprise · Requires approval
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tabit.png
 tags:
 - Restaurant
 - Point of Sale
