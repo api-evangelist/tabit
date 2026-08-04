@@ -1,0 +1,14 @@
+{
+  "provider": "tabit",
+  "sources": [
+    "tabit-openapi.yml"
+  ],
+  "outputs": [],
+  "archived": [
+    "archived tabit-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
