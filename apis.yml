@@ -44,7 +44,7 @@ apis:
   properties:
   - url: https://www.tabit.cloud/integrations/
     type: Documentation
-  - url: openapi/tabit-openapi.yml
+  - url: openapi/_original/tabit-openapi.yml
     type: OpenAPI
   description: Order capture and management across Tabit's mobile POS (PAD), online
     ordering (Order), kiosk, and delivery (Wheels) products. Order data flows to
@@ -62,7 +62,7 @@ apis:
   properties:
   - url: https://support-us.tabit.cloud/hc/en-us/sections/4942208018578-Online-Ordering-Integrations
     type: Documentation
-  - url: openapi/tabit-openapi.yml
+  - url: openapi/_original/tabit-openapi.yml
     type: OpenAPI
   description: Menu and item/modifier management used to publish Tabit menus to
     online-ordering and third-party delivery channels (third-party menu management).
@@ -79,7 +79,7 @@ apis:
   properties:
   - url: https://www.tabit.cloud/integrations/
     type: Documentation
-  - url: openapi/tabit-openapi.yml
+  - url: openapi/_original/tabit-openapi.yml
     type: OpenAPI
   description: Reservation and guest-management capabilities, including integration
     with reservation software (e.g., Tabit is a listed OpenTable POS integration
@@ -96,7 +96,7 @@ apis:
   properties:
   - url: https://support-us.tabit.cloud/hc/en-us/categories/22390251048210-Payments
     type: Documentation
-  - url: openapi/tabit-openapi.yml
+  - url: openapi/_original/tabit-openapi.yml
     type: OpenAPI
   description: Tabit Pay handles tableside card, tap-to-pay, and pay-at-table flows
     (QR / SMS to the guest's device) along with a Secure Payment Form (SPF) component
@@ -116,7 +116,7 @@ apis:
     type: Documentation
   - url: https://support-us.tabit.cloud/hc/en-us/sections/15837301376658-Integration-Guides
     type: Documentation
-  - url: openapi/tabit-openapi.yml
+  - url: openapi/_original/tabit-openapi.yml
     type: OpenAPI
   description: Tabit's partner integration surface spanning Hotel PMS, white-label
     delivery (e.g., DoorDash Marketplace), analytics, reservation software, and
