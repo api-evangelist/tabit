@@ -24,6 +24,12 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tabit.png
 tags:
 - Restaurant
+- Point-of-Sale
+- Hospitality
+- Ordering
+- Payments
+tags_raw:
+- Restaurant
 - Point of Sale
 - POS
 - Hospitality
@@ -36,6 +42,10 @@ apis:
 - aid: tabit:tabit-orders-api
   name: Tabit Orders API
   tags:
+  - Order
+  - Ordering
+  - Point-of-Sale
+  tags_raw:
   - Orders
   - Ordering
   - POS
@@ -54,6 +64,10 @@ apis:
 - aid: tabit:tabit-menu-api
   name: Tabit Menu API
   tags:
+  - Menus
+  - Catalog
+  - Item
+  tags_raw:
   - Menu
   - Catalog
   - Items
@@ -106,6 +120,10 @@ apis:
 - aid: tabit:tabit-integrations-api
   name: Tabit Integrations API
   tags:
+  - Integration
+  - Partners
+  - PMS
+  tags_raw:
   - Integrations
   - Partners
   - PMS
