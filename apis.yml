@@ -97,6 +97,10 @@ apis:
   name: Tabit Reservations API
   tags:
   - Reservations
+  - Booking
+  - Guest
+  tags_raw:
+  - Reservations
   - Bookings
   - Guest
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
